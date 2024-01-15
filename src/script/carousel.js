@@ -1,7 +1,3 @@
-import imageUrl from '../assets/images/desktop.png';
-import imageUrl2 from '../assets/images/google.png';
-import imageUrl3 from '../assets/images/vscode.png';
-
 var projects = document.getElementsByClassName('carouselItem');
 
 let current = 0;
