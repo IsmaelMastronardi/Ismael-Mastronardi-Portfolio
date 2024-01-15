@@ -1,16 +1,32 @@
 ---
 import { Image } from 'astro:assets';
 import imageUrl from '../assets/images/desktop.png';
+import imageUrl2 from '../assets/images/google.png';
+import imageUrl3 from '../assets/images/vscode.png';
 ---
 
-<section class="bg-slate-900 h-[calc(100vh-58px)] snap-start" id="projects">
-  <div id="carousel">
-    <ul>
-      <li>
-        <Image src={imageUrl} alt='desktop'/> 
+<section class="bg-slate-900 h-[calc(100vh-58px)] snap-start flex flex-col " id="projects">
+  <div class="">
+    <h1 class="text-6xl">Projects</h1>
+  </div>
+  <div id="carousel bg-red-300 w-full">
+    <ul class="flex flex-row bg-cyan-300 justify-center content-center relative" id="caroussel">
+      <li class="w-1/3 flex justify-center items-center absolute right-2/4 top-1/2 bottom-1/2 carouselItem">
+        <Image src={imageUrl3} alt='desktop' class="opacity-80  carouselBack"/> 
+      </li>
+      <li class="w-1/2 z-10 carouselItem">
+        <Image src={imageUrl} alt='desktop' class=''/> 
+      </li>
+      <li class="w-1/3 flex justify-center items-center absolute left-2/4 top-1/2 bottom-1/2 carouselItem">
+        <Image src={imageUrl2} alt='desktop' class="opacity-80  carouselNext"/> 
+      </li>
+      <li class="w-1/3 flex justify-center items-center absolute left-2/4 top-1/2 bottom-1/2 carouselItem">
+        <Image src={imageUrl2} alt='desktop' class="opacity-80  hidden"/> 
       </li>
     </ul>
   </div>
 </section>
 
-<!-- h-[calc(100vh-40px)] -->
+<script src="../script/carousel.js">
+
+</script>
