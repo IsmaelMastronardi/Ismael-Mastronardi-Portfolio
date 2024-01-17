@@ -52,3 +52,6 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+
+<a href="https://www.freepik.com/free-vector/abstract-network-communications-background-with-low-poly-design_10135303.htm#query=futuristic%20background&position=33&from_view=search&track=ais&uuid=17a06299-6ee6-42b6-ae9b-1d8e85b114e4">Image by kjpargeter</a> on Freepik
