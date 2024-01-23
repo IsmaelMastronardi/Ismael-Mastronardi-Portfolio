@@ -2,18 +2,19 @@
 import Layout from '../layouts/Layout.astro';
 import Navigation from '../components/navigation.astro';
 import Home from '../components/home.astro';
-import Skills from '../components/skills.astro'
 import Projects from '../components/projects.astro';
+import Contact from '../components/contact.astro';
+import About from '../components/about.astro';
 ---
 
 <Layout title="">
 	<Navigation />
-		<main class="snap-y snap-mandatory snap-always overflow-y-scroll h-screen scroll-pt-24 pt-20">
-			
+		<main class="h-screen">
+
 			<Home />
+			<About />
 			<Projects />	
-			<Skills />
-				
+			<Contact />
 		</main>
 
 </Layout>
