@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets';
+---
+<section class="bg-white pb-10 pt-14 text-center flex flex-col gap-12" id="about">
+  <div>
+    <p class="text-2xl font-bold text-tekhelet p-5" id="top">I can help you build a product , feature or website Look through some of my work and experience!<br/> If you like what you see and have a project you need coded,
+      <br/>don’t hesitate to contact me.
+    </p>
+    <button class="bg-thistle p-2 rounded-3xl text-tekhelet font-bold">
+      Get My Resume
+    </button>
+    <div>
+      <p class="text-2xl font-bold text-tekhelet p-5">
+        This are some of the tools that I use to create Awesome projects!
+      </p>
+      <ul class="grid grid-cols-2 gap-4" id="skills-list">
+      </ul>
+    </div>
+  </div>
+</section>
+<script>
+import ruby_icon from '../assets/images/tech_icons/ruby.svg'
+import js_icon from '../assets/images/tech_icons/javascript.svg'
+import react_icon from '../assets/images/tech_icons/react.svg'
+import html_icon from '../assets/images/tech_icons/html-5.svg'
+import css_icon from '../assets/images/tech_icons/css-3.svg'
+import tailwind_icon from '../assets/images/tech_icons/tailwindcss-icon.svg'
+import postgres_icon from '../assets/images/tech_icons/postgresql.svg'
+import redux_icon from '../assets/images/tech_icons/redux.svg'
+import rails_icon from '../assets/images/tech_icons/rails.svg'
+import git_icon from '../assets/images/tech_icons/git-icon.svg'
+
+const skills_list = document.getElementById('skills-list');
+const skills = [
+  { name: 'JavaScript', img: js_icon.src },
+  { name: 'Ruby', img: ruby_icon.src },
+  { name: 'React', img: react_icon.src },
+  { name: 'Ruby on Rails', img: rails_icon.src },
+  { name: 'Redux', img: redux_icon.src },
+  { name: 'PostgreSQL', img: postgres_icon.src },
+  { name: 'HTML5', img: html_icon.src },
+  { name: 'CSS3', img: css_icon.src },
+  { name: 'Tailwind CSS', img: tailwind_icon.src },
+  { name: 'Git', img: git_icon.src },
+];
+
+skills.forEach((el) => {
+  const item = document.createElement('li');
+  item.className = 'flex flex-row justify-center relative p-10';
+  item.innerHTML = `
+    <div class="border border-indigo rounded-xl hover:bg-lavender max-w-20 absolute p-4 top-0">
+      <Image src="${el.img}" alt="${el.name}" class="w-10 h-10"/>
+    </div>
+    `;
+  skills_list.appendChild(item)
+})
+
+</script>

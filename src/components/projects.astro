@@ -1,16 +1,27 @@
 ---
 import { Image } from 'astro:assets';
-import imageUrl from '../assets/images/desktop.png';
 ---
 
-<section class="bg-slate-900 h-[calc(100vh-58px)] snap-start" id="projects">
-  <div id="carousel">
-    <ul>
-      <li>
-        <Image src={imageUrl} alt='desktop'/> 
-      </li>
+<section class="bg-indigo pb-14 pt-14 flex flex-col text-center gap-20" id="projects">
+  <div class="">
+    <h1 class="text-6xl">Projects</h1>
+  </div>
+  <div>
+    <p>
+      Here you can see a selection of my projects
+    </p>
+  </div>
+  <div class="flex flex-col gap-10" id="carousel">
+    <h3 class="text-gray-light" id="project-title"></h3>
+    <ul class="flex flex-row justify-center content-center relative" id="caroussel">
     </ul>
+    <p id="project_description"></p>
+    <div class="flex flex-row justify-center gap-20">
+      <button class="button-1"><a href="" id="see_live">See Live</a></button>
+      <button class="button-1"><a href="" id="see_code">See code</a></button>
+    </div>
   </div>
 </section>
 
-<!-- h-[calc(100vh-40px)] -->
+<script src="../script/carousel.js">
+</script>

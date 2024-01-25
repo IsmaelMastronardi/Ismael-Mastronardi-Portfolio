@@ -1,0 +1,50 @@
+<section class="bg-rose-quarz h-screen pt-14" id="contact">
+  <section class="flex flex-col gap-20 justify-center text-center" id="contact">
+    <h2 class="font-bold text-2xl">
+      I'm always interested in hearing <br class=""/>about new projects, so if you'd<br class="formBreak"/> like
+      to chat please get in touch.
+    </h2>
+    <form action="https://formspree.io/f/xnqykbkb" method="post" id="form">
+      <ul class="flex flex-col gap-10 w-full">
+        <li class="w-full flex flex-col">
+          <label for="name" class="">Your name</label>
+          <input
+            required
+            type="text"
+            name="userName"
+            id="name"
+            class="w-10/12"
+            placeholder="Enter Your Name"
+            maxlength="30"
+          />
+        </li>
+        <li class="w-full">
+            <label for="mail">Your Email</label>
+            <input
+              required
+              type="email"
+              name="userEmail"
+              id="mail"
+              class="w-10/12"
+              placeholder="Enter Your Email"       
+            />             
+        </li>
+        <li class="w-full">
+          <label for="text">Your Message</label>
+          <textarea 
+            required
+            name="userText" 
+            id="text" 
+            class="w-10/12" 
+            placeholder="Hey I’d like to connect to..."
+            cols="41"rows="5"></textarea>
+        </li>
+        <li class="">
+          <button type="submit" class="">
+            Get in touch
+          </button>
+        </li>
+      </ul>
+    </form>
+  </section>
+</section>
