@@ -50,5 +50,11 @@ const { title } = Astro.props;
 	}
 	.button-1 {
   @apply bg-thistle p-2 rounded-3xl text-tekhelet font-bold;
-}
+	}
+	.custom-shadow {
+		@apply transition-all duration-100 shadow-xxl hover:shadow-2xxl
+	}
+	.custom-shadow-light {
+		@apply transition-all duration-100 shadow-sm hover:shadow-xxl
+	}
 </style>
