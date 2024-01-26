@@ -6,7 +6,5 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  buildOptions: {
-    pages: true,
-  },
+  site: 'https://mastronardiismael.github.io',
 });
