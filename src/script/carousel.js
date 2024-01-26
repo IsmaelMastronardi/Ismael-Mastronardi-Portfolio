@@ -45,11 +45,11 @@ projects.forEach((el) => {
   item.className = 'w-6/12 flex justify-center items-center absolute right-45% top-1/2 bottom-1/2 carouselItem';
   item.dataset.name = el.name;
 
-  const techStackHTML = el.tech_stack.map(tech => `<li class="bg-dark-purple rounded-md p-1 font-bold shadow-xxl hover:shadow-2xxl cursor-pointer"><p>${tech}</p></li>`).join('');
+  const techStackHTML = el.tech_stack.map(tech => `<li class="bg-dark-purple rounded-md p-1 font-bold shadow-xxl hover:shadow-2xxl cursor-pointer lg:p-2 lg:text-lg"><p>${tech}</p></li>`).join('');
 
   item.innerHTML = `
-    <div class="absolute z-20 right-0 left-0  top-40 tech-stack" style="display: none;">
-      <ul class="w-full flex flex-row justify-around">
+    <div class="absolute z-20 right-0 left-0 top-2/3 tech-stack flex flex-row justify-center" style="display: none;">
+      <ul class="flex-row justify-center hidden md:flex w-5/6 gap-4">
         ${techStackHTML}
       </ul>
     </div>
@@ -85,7 +85,7 @@ const projectDescription = document.getElementById('project_description')
 const updateCarousel = () => {
   Array.from(carouseltems).forEach((el, index) => {
     if (index === current) {
-      el.className = 'w-7/12 z-10 relative carouselItem bg-gray-light rounded-xl';
+      el.className = 'w-6/12 z-10 relative carouselItem bg-gray-light rounded-xl xl:max-w-5xl 2xl:max-w-7xl';
       el.firstElementChild.classList.remove('hidden')
       el.lastElementChild.className = 'rounded-b-xl';
       el.lastElementChild.removeEventListener('click', carouselBack);
@@ -96,7 +96,7 @@ const updateCarousel = () => {
       codeLink.href = projects[current].code_link
     } 
     else if (index === prev) {
-      el.className = 'w-6/12 flex justify-center items-center absolute right-45% top-1/2 bottom-1/2 carouselItem';
+      el.className = 'w-5/12 flex justify-center items-center absolute right-45% top-1/2 bottom-1/2 carouselItem';
       el.firstElementChild.classList.add('hidden')
       el.children[1].classList.add('hidden')
       el.lastElementChild.className = 'opacity-60  carouselBack rounded-xl';
@@ -104,7 +104,7 @@ const updateCarousel = () => {
       el.lastElementChild.addEventListener('click', carouselBack);
     } 
     else if (index === next) {
-      el.className = 'w-6/12 flex justify-center items-center absolute left-45% top-1/2 bottom-1/2 carouselItem';
+      el.className = 'w-5/12 flex justify-center items-center absolute left-45% top-1/2 bottom-1/2 carouselItem';
       el.firstElementChild.classList.add('hidden')
       el.children[1].classList.add('hidden')
       el.lastElementChild.className = 'opacity-60 carouselNext rounded-xl';
