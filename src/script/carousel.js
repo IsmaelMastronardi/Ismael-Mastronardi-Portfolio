@@ -85,7 +85,6 @@ const updateCarousel = () => {
       el.lastElementChild.removeEventListener('click', carouselBack);
       el.lastElementChild.removeEventListener('click', carouselNext);
       el.firstElementChild.classList.remove('hidden')
-      console.log(el.children[1])
       projectDescription.innerText = projects[current].description
       liveLink.href = projects[current].live_link
       codeLink.href = projects[current].code_link
