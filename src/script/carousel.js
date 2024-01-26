@@ -1,43 +1,35 @@
-import project1 from '../assets/images/project_images/AppointWheels.png'
-import project2 from '../assets/images/project_images/SpaceXploration.png';
-import project3 from '../assets/images/project_images/CbaFestival.png';
-import project4 from '../assets/images/project_images/SpaceXploration.png';
+import AppointWheels from '../assets/images/project_images/AppointWheels.png'
+import BudgetBinder from '../assets/images/project_images/BudgetBinder.png';
+import pollution_on_capitals from '../assets/images/project_images/CapitalsApp.png';
+import project4 from '../assets/images/project_images/BudgetBinder.png';
 
 const projects_container = document.getElementById('caroussel')
 
 const projects = [
   {
     name: 'AppointWheels',
-    img: project1.src,
-    live_link: 'p1',
-    code_link: 'p1',
-    description: 'REACT-AppointWheels is a Full Stack application that allows users to create accounts and rent cars, while allowing admins to create and delete them.',
+    img: AppointWheels.src,
+    live_link: 'https://appoint-wheels.onrender.com',
+    code_link: 'https://github.com/Rysth/REACT-AppointWheels',
+    description: 'A Full Stack application that allows users to create accounts and rent cars, while allowing admins to create and delete them.',
     tech_stack: ['JavaScript', 'React', 'Redux', 'Ruby', 'Ruby on Rails']
   },
   {
-    name: 'Project2',
-    img: project2.src,
-    live_link: 'p2',
-    code_link: 'p2',
-    description: 'REACT-AppointWheels is a Full Stack application that allows users to create accounts and rent cars, while allowing admins to create and delete them.',
-    tech_stack: ['JavaScript', 'React', 'Redux', 'Ruby', 'Ruby on Rails'],
+    name: 'BudgetBinder',
+    img: BudgetBinder.src,
+    live_link: 'https://budget-binder.onrender.com',
+    code_link: 'https://github.com/IsmaelMastronardi/budget-app',
+    description: 'A Ruby on Rails aplication to keep track of your spending and budget. You can create categories and add transactions!',
+    tech_stack: ['Ruby', 'Ruby on Rails', 'tailwind'],
   },
   {
-    name: 'Project3',
-    img: project3.src,
-    live_link: 'p3',
-    code_link: 'p3',
-    description: 'REACT-AppointWheels is a Full Stack application that allows users to create accounts and rent cars, while allowing admins to create and delete them.',
-    tech_stack: ['JavaScript', 'React', 'Redux', 'Ruby', 'Ruby on Rails'],
-  },
-  {
-    name: 'Project4',
-    img: project4.src,
-    live_link: 'p4',
-    code_link: 'p4',
-    description: 'REACT-AppointWheels is a Full Stack application that allows users to create accounts and rent cars, while allowing admins to create and delete them.',
-    tech_stack: ['Ruby', 'Ruby on Rails'],
-  },
+    name: 'Pollution On Capitals',
+    img: pollution_on_capitals.src,
+    live_link: 'https://pollution-on-capitals.onrender.com',
+    code_link: 'https://github.com/IsmaelMastronardi/Pollution-On-Capitals',
+    description: 'A React/Redux application built using the Air Pollution API. It gives you information about the pollution in the selected cities',
+    tech_stack: ['JavaScript', 'React', 'Redux'],
+  }
 ];
 
 projects.forEach((el) => {
@@ -99,7 +91,7 @@ const updateCarousel = () => {
       el.className = 'w-5/12 flex justify-center items-center absolute right-45% top-1/2 bottom-1/2 carouselItem';
       el.firstElementChild.classList.add('hidden')
       el.children[1].classList.add('hidden')
-      el.lastElementChild.className = 'opacity-60  carouselBack rounded-xl';
+      el.lastElementChild.className = 'carouselBack rounded-xl';
       el.lastElementChild.removeEventListener('click', carouselNext);
       el.lastElementChild.addEventListener('click', carouselBack);
     } 
@@ -107,12 +99,11 @@ const updateCarousel = () => {
       el.className = 'w-5/12 flex justify-center items-center absolute left-45% top-1/2 bottom-1/2 carouselItem';
       el.firstElementChild.classList.add('hidden')
       el.children[1].classList.add('hidden')
-      el.lastElementChild.className = 'opacity-60 carouselNext rounded-xl';
+      el.lastElementChild.className = 'carouselNext rounded-xl';
       el.lastElementChild.removeEventListener('click', carouselBack);
       el.lastElementChild.addEventListener('click', carouselNext);
     } 
     else {
-      el.className = "w-6/12 flex justify-center items-center absolute left-2/4 top-1/2 bottom-1/2 carouselItem";
       el.firstElementChild.classList.add('hidden')
       el.lastElementChild.className = 'hidden';
       el.lastElementChild.removeEventListener('click', carouselBack);

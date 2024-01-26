@@ -2,7 +2,6 @@
 import { Image } from 'astro:assets';
 import github_icon from '../assets/images/social_media_icons/github-icon.svg';
 ---
-
 <section class="lg:pt-20 bg-indigo pb-14 pt-14 flex flex-col text-center gap-20 text-lavender sm:min-h-screen" id="projects">
   <div class="">
     <h2 class="text-5xl lg:text-6xl 2xl:text-7xl">Projects</h2>
@@ -15,16 +14,15 @@ import github_icon from '../assets/images/social_media_icons/github-icon.svg';
     </div>
     <div class="flex flex-row justify-center gap-20">
       <button class="hover:bg-transparent-white shadow-xxl hover:shadow-2xxl p-2 bg-thistle rounded-full">
-        <a href="" class="" id="see_live">
+        <a href="" class="" id="see_code" target="_blank">
           <Image src={github_icon} alt='github icon' class='w-14'/>
         </a>
       </button>
       <button class="hover:bg-transparent-white shadow-xxl hover:shadow-2xxl p-2 bg-thistle rounded-full">
-        <a class="font-bold text-black" href="" id="see_code">See Live</a>
+        <a class="font-bold text-black" href="" id="see_live" target="_blank">See Live</a>
       </button>
     </div>
   </div>
 </section>
-
 <script src="../script/carousel.js">
 </script>
