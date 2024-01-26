@@ -4,7 +4,7 @@ import github_icon from '../assets/images/social_media_icons/github-icon.svg';
 ---
 <section class="lg:pt-20 bg-indigo pb-14 pt-14 flex flex-col text-center gap-20 text-lavender sm:min-h-screen" id="projects">
   <div class="">
-    <h2 class="text-5xl lg:text-6xl 2xl:text-7xl">Projects</h2>
+    <h2 class="text-5xl lg:text-6xl 2xl:text-7xl" id="proyects_heading">Projects</h2>
   </div>
   <div class="flex flex-col gap-8 justify-center items-center" id="carousel">
     <ul class="flex flex-row justify-center content-center relative flex-wrap" id="caroussel">
@@ -29,4 +29,11 @@ import github_icon from '../assets/images/social_media_icons/github-icon.svg';
   </div>
 </section>
 <script src="../script/carousel.js">
+</script>
+<script>
+    import setupIntersectionObserver from '../script/intersectionObserver.js';
+    document.addEventListener('DOMContentLoaded', function () {
+      const proyectsHeading = document.getElementById('proyects_heading');
+      setupIntersectionObserver(proyectsHeading, 'animate-slide-from-above');
+    });
 </script>
