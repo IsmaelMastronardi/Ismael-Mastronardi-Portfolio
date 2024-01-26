@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets'
+import github_icon from '../assets/images/social_media_icons/github-icon.svg'
+import linkedin_icon from '../assets/images/social_media_icons/linkedin-icon.svg'
+import twitter_icon from '../assets/images/social_media_icons/twitter.svg'
+
+---
+<section class="bg-gray-light h-60 flex justify-center flex-col items-center gap-10">
+  <div>
+    <p>
+      <a class="font-bold text-xl text-indigo">mastronardiismael@gmail.com</a>
+    </p>
+  </div>
+  <ul class="flex justify-center items-center gap-10">
+    <li class="">
+      <a href="https://twitter.com/IsmaMastronardi" target="_blank" class="">
+        <Image src={github_icon} alt='github_icon' class="w-10"/>
+      </a>
+    </li>
+    <li class="">
+      <a href="https://www.linkedin.com/in/ismael-mastronardi-361873271/" target="_blank">
+        <Image src={linkedin_icon} alt='linkedin_icon' class="w-10"/>
+      </a>
+    </li>
+    <li class="">
+      <a href="https://github.com/IsmaelMastronardi" target="_blank">
+        <Image src={twitter_icon} alt='twitter_icon' class="w-10"/>
+      </a>
+    </li>
+  </ul>
+</section>

@@ -1,50 +1,64 @@
-<section class="bg-rose-quarz h-screen pt-14" id="contact">
-  <section class="flex flex-col gap-20 justify-center text-center" id="contact">
-    <h2 class="font-bold text-2xl">
-      I'm always interested in hearing <br class=""/>about new projects, so if you'd<br class="formBreak"/> like
-      to chat please get in touch.
+<section class="bg-white min-h-screen pt-4 text-indigo xl:pt-20 2xl:pt-6" id="contact">
+  <div class="flex flex-col gap-10 justify-center text-center items-center 2xl:min-h-screen" id="contact">
+    <h2 class="font-bold text-5xl lg:text-6xl 2xl:text-7xl">
+      Contact
     </h2>
-    <form action="https://formspree.io/f/xnqykbkb" method="post" id="form">
-      <ul class="flex flex-col gap-10 w-full">
-        <li class="w-full flex flex-col">
-          <label for="name" class="">Your name</label>
+    <form action="https://formspree.io/f/xnqykbkb" method="post" id="form" class="w-full flex justify-center max-w-screen-lg">
+      <ul class="flex flex-col gap-4 w-2/3 border p-4 rounded-2xl 2xl:gap-2">
+        <li class="w-full flex flex-col justify-start items-start text-start">
+          <p class="font-bold lg:text-xl">
+            I'm always interested in hearing about new projects, so if you'd like
+            to chat please get in touch.
+          </p>
+        </li>
+        <li class="formItem">
+          <label for="name" class="py-2 font-bold">Your name</label>
           <input
             required
             type="text"
             name="userName"
             id="name"
-            class="w-10/12"
+            class="formInput"
             placeholder="Enter Your Name"
             maxlength="30"
           />
         </li>
-        <li class="w-full">
-            <label for="mail">Your Email</label>
+        <li class="formItem">
+            <label for="mail" class="py-2 font-bold">Your Email</label>
             <input
               required
               type="email"
               name="userEmail"
               id="mail"
-              class="w-10/12"
+              class="formInput"
               placeholder="Enter Your Email"       
             />             
         </li>
-        <li class="w-full">
-          <label for="text">Your Message</label>
+        <li class="formItem">
+          <label for="text" class="py-2 font-bold">Your Message</label>
           <textarea 
             required
             name="userText" 
             id="text" 
-            class="w-10/12" 
+            class="formInput" 
             placeholder="Hey I’d like to connect to..."
             cols="41"rows="5"></textarea>
         </li>
         <li class="">
-          <button type="submit" class="">
+          <button type="submit" class="transition-all duration-100 bg-indigo text-white p-4 rounded-full font-bold hover:bg-semi-transparent-indigo shadow-xxl hover:shadow-2xxl active:bg-extra-transparent-indigo lg:px-6">
             Get in touch
           </button>
         </li>
       </ul>
     </form>
-  </section>
+  </div>
 </section>
+
+<style>
+  .formItem {
+    @apply w-full flex flex-col justify-start items-start pb-4 lg:text-lg 2xl:text-xl
+  }
+  .formInput {
+    @apply placeholder:text-white bg-thistle py-1 px-4 w-full lg:text-lg 2xl:text-xl
+  }
+</style>

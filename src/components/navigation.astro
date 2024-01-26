@@ -1,10 +1,44 @@
 ---
 ---
-<nav class="bg-blue p-4 fixed top-0 right-0 left-0 bg-white z-50">
+<nav class="bg-blue p-1 fixed top-4  left-4 right-4 sm:right-1/4 sm:left-1/4 bg-rose-quarz z-50 rounded-s-full rounded-e-full">
   <ul class="link-card flex flex-row gap-6 justify-center ">
-    <li class="text-black"><a href="#home">Home</a></li>
-    <li class="text-black"><a href="#about">About</a></li>
-    <li class="text-black"><a href="#projects">Projects</a></li>
-    <li class="text-black"><a href="#contact">Contact</a></li>
+    <li class="text-white font-bold"><a href="#home">Home</a></li>
+    <li class="text-white font-bold"><a href="#about">About</a></li>
+    <li class="text-white font-bold"><a href="#projects">Projects</a></li>
+    <li class="text-white font-bold"><a href="#contact">Contact</a></li>
   </ul>
 </nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    // Function to find the current section
+    const sectionCheker = () => {
+      let currentSection = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (window.scrollY >= sectionTop && window.scrollY <= sectionBottom) {
+          currentSection = section.id;
+        }
+      });
+
+      // Remove the desired classes from all links
+      navLinks.forEach(link => link.classList.remove("text-indigo", "underline"));
+
+      // Add the desired classes to the Link for the current section
+      const activeLink = document.querySelector(`nav ul li a[href="#${currentSection}"]`);
+      if (activeLink) {
+        activeLink.classList.add("text-indigo", "underline");
+      }
+    }
+    //called once to select the home element
+    sectionCheker();
+
+    window.addEventListener("scroll", sectionCheker);});
+
+
+</script>
