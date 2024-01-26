@@ -3,8 +3,8 @@ import { Image } from 'astro:assets';
 ---
 <section class="bg-white pb-10 pt-14 flex flex-col gap-12 justify-center items-center lg:pt-20 sm:min-h-screen" id="about">
   <div class="flex flex-col justify-center items-center lg:gap-8">
-    <h2 class="font-bold text-indigo text-5xl lg:text-6xl 2xl:text-7xl">About Me</h2>
-    <p class="font-bold text-tekhelet p-5 text-xl 2xl:text-2xl lg:text-center" id="top">
+    <h2 class="font-bold text-indigo text-5xl lg:text-6xl 2xl:text-7xl" id="about-heading">About Me</h2>
+    <p class="font-bold text-tekhelet p-5 text-xl 2xl:text-2xl lg:text-center" id="about-description">
       Hello, I am a passionate Full-Stack Developer, with expertice in crafting dynamic web pages.<br/>
       I love meeting new people and I always welcome new challenges.<br/>
       If you have A project you need coded, don't hesitate to contact me.
@@ -27,6 +27,7 @@ import { Image } from 'astro:assets';
 </section>
 
 <script>
+import setupIntersectionObserver from '../script/intersectionObserver.js';
 import ruby_icon from '../assets/images/tech_icons/ruby.svg'
 import js_icon from '../assets/images/tech_icons/javascript.svg'
 import react_icon from '../assets/images/tech_icons/react.svg'
@@ -62,4 +63,9 @@ skills.forEach((el) => {
     `;
   skills_list.appendChild(item)
 })
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const aboutHeading = document.getElementById('about-heading');
+    setupIntersectionObserver(aboutHeading, 'animate-slide-from-above');
+  });
 </script>

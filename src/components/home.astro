@@ -1,15 +1,40 @@
+---
+import { Image } from 'astro:assets'
+import github_icon from '../assets/images/social_media_icons/github-icon.svg'
+import linkedin_icon from '../assets/images/social_media_icons/linkedin-icon.svg'
+import twitter_icon from '../assets/images/social_media_icons/twitter.svg'
+
+---
+
 <section class="bg-slate-600 h-screen" id="home">
-  <div class="home h-full text-center">
-    <div class="flex flex-col gap-20 h-full items-center justify-center lg:gap-40">
-      <h1 class="text-thistle text-5xl font-bold xl:text-8xl lg:text-6xl">
-        <span class="text-purple-400">Hey there.<br class="md:hidden"/> I’m <span class="">Ismael.</span></span> <br/>I’m a software<br class="md:hidden"/> developer!
-      </h1>
-      <p class="px-8 text-xl lg:text-2xl xl:text-4l text-lavender">
-        I can help you build any product , feature or website<br/>
-        Look through some of my work and experience!<br/>
-        If you like what you see and have a project you need coded,<br/>
-        don’t hesitate to contact me.
+  <div class="home h-full text-start flex justify-center">
+    <div class="flex flex-col h-full w-full md:w-2/3 items-center justify-center text-center gap-10">
+      <p class="font-bold text-thistle text-xl xl:text-2xl xl:-mb-32 -mb-20">
+        Hello, I am a
       </p>
+      <h1 class="text-thistle text-5xl font-bold xl:text-8xl lg:text-6xl lg:pb-40">
+        <br/>Full-Stack <br class="md:hidden"/><span class="text-purple-400">developer!</span>
+      </h1>
+      <p class="px-8 text-xl lg:text-2xl xl:text-4l text-thistle">
+        My name Is Ismael, I am a Programer from Argentina.<br/>I build web applications and websites with precision and care.
+      </p>
+      <ul class="flex justify-center items-center gap-10 ">
+        <li class="">
+          <a href="https://twitter.com/IsmaMastronardi" target="_blank" class="">
+            <Image src={github_icon} alt='github_icon' class="w-10"/>
+          </a>
+        </li>
+        <li class="">
+          <a href="https://www.linkedin.com/in/ismael-mastronardi-361873271/" target="_blank">
+            <Image src={linkedin_icon} alt='linkedin_icon' class="w-10"/>
+          </a>
+        </li>
+        <li class="">
+          <a href="https://github.com/IsmaelMastronardi" target="_blank">
+            <Image src={twitter_icon} alt='twitter_icon' class="w-10"/>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
