@@ -1,7 +1,6 @@
 import AppointWheels from '../assets/images/project_images/AppointWheels.png'
-import BudgetBinder from '../assets/images/project_images/BudgetBinder.png';
-import pollution_on_capitals from '../assets/images/project_images/CapitalsApp.png';
-import project4 from '../assets/images/project_images/BudgetBinder.png';
+import BudgetBinder from '../assets/images/project_images/Budget_Binder.png';
+import pollution_on_capitals from '../assets/images/project_images/capitals_app.png';
 
 const projects_container = document.getElementById('caroussel')
 
