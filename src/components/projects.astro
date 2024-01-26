@@ -1,17 +1,17 @@
 ---
 import { Image } from 'astro:assets';
-import github_icon from '../assets/images/github-icon (1).svg'
+import github_icon from '../assets/images/social_media_icons/github-icon.svg';
 ---
 
-<section class="bg-indigo pb-14 pt-14 flex flex-col text-center gap-20 text-lavender" id="projects">
+<section class="lg:pt-20 bg-indigo pb-14 pt-14 flex flex-col text-center gap-20 text-lavender sm:min-h-screen" id="projects">
   <div class="">
-    <h2 class="text-5xl">Projects</h2>
+    <h2 class="text-5xl lg:text-6xl 2xl:text-7xl">Projects</h2>
   </div>
   <div class="flex flex-col gap-8 justify-center items-center" id="carousel">
-    <ul class="flex flex-row justify-center content-center relative" id="caroussel">
+    <ul class="flex flex-row justify-center content-center relative flex-wrap" id="caroussel">
     </ul>
     <div class="w-full text-start flex justify-center">
-      <p  class="w-2/3 text-gray-light" id="project_description"></p>
+      <p  class="w-2/3  lg:text-xl xl:text-2xl lg:w-1/2" id="project_description"></p>
     </div>
     <div class="flex flex-row justify-center gap-20">
       <button class="hover:bg-transparent-white shadow-xxl hover:shadow-2xxl p-2 bg-thistle rounded-full">
