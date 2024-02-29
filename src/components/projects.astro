@@ -1,16 +1,94 @@
 ---
 import { Image } from 'astro:assets';
 import github_icon from '../assets/images/social_media_icons/github-icon.svg';
+import arrowPrev from '../assets/images/2931162_arrow_back_left_direction_move_icon (1).png';
+import arrowNext from '../assets/images/2931159_arrow_forward_right_move_navigation_icon (2).png';
+import appointWheelsImg from '../assets/images/project_images/AppointWheels.png';
+import polutionOnCapitalsImg from '../assets/images/project_images/capitals_app.png';
+import budgetBinderImg from '../assets/images/project_images/Budget_Binder.png';
+import spaceXplorationImg from '../assets/images/project_images/Space_Xploration.png';
+import neotechImg from '../assets/images/project_images/Neotech.png';
 ---
-<section class="lg:pt-20 bg-indigo pb-14 pt-14 flex flex-col text-center gap-20 text-lavender sm:min-h-screen" id="projects">
+<style>
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms ;
+  @apply rounded-md w-full flex justify-center items-center
+}
+.slide[data-active] {
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.5s;
+  transition-delay: 0ms;
+}
+.slide > img {
+  object-position: center;
+  @apply w-11/12 lg:w-10/12 xl:w-9/12 2xl:w-8/12 rounded-lg
+}
+.carousel-button {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, .6);
+  @apply rounded-md px-4 py-1 z-10
+}
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, .8);
+  @apply transition duration-300 ease-in-out
+}
+.carousel-button:active {
+  background-color: rgba(0, 0, 0, 1);
+  @apply transition duration-300 ease-in-out
+}
+.carousel-button-prev {
+  left: 30%;
+  @apply lg:left-1/3
+}
+.carousel-button-next {
+  right: 30%;
+  @apply lg:right-1/3
+}
+</style>
+<section class="lg:pt-20 bg-indigo pb-14 pt-14 flex flex-col text-center gap-10 lg:gap-20 text-lavender sm:min-h-screen" id="projects">
   <div class="">
     <h2 class="text-5xl lg:text-6xl 2xl:text-7xl" id="proyects_heading">Projects</h2>
   </div>
-  <div class="flex flex-col gap-8 justify-center items-center" id="carousel">
-    <ul class="flex flex-row justify-center content-center relative flex-wrap" id="caroussel">
-    </ul>
+  <p class="text-2xl font-bold" id="project_title">Appoint Wheels</p>
+  <div class="flex flex-col gap-8 justify-center items-center ">
+    <div class="w-full h-full">
+      <div class="h-full w-full relative" data-carousel>
+        <button class="carousel-button carousel-button-prev" data-carousel-button="prev" id="arrow_prev">
+          <Image src={arrowPrev} alt='arrow prev' class='w-6 md:w-7 lg:w-8 xl:w-9'/>
+        </button>
+        <button class="carousel-button carousel-button-next" data-carousel-button="next" id="arrow_next">
+          <Image src={arrowNext} alt='arrow next' class='w-6 md:w-7 lg:w-8 xl:w-9'/>
+        </button>
+        <ul id="caroussel_ul" data-slides class="">
+          <li class="slide flex flex-col" data-active data-name="Appoint Wheels">
+            <Image src={appointWheelsImg} alt='appoint-wheels' class='' />
+          </li>
+          <li class="slide" data-name="Neotech">
+            <Image src={neotechImg} alt='neotech image' class='' />
+          </li>
+          <li class="slide" data-name="Budget Binder">
+            <Image src={budgetBinderImg} alt='budgetBinderImg' class='' />
+          </li>
+          <li class="slide" data-name="Pollution on Capitals">
+            <Image src={polutionOnCapitalsImg} alt='polutionOnCapitalsImg' class='' />
+          </li>
+          <li class="slide" data-name="Space Xploration">
+            <Image src={spaceXplorationImg} alt='spaceXplorationImg' class='' />
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="w-full text-start flex justify-center">
-      <p  class="w-2/3  lg:text-xl xl:text-2xl lg:w-1/2" id="project_description"></p>
+      <p  class="w-2/3  lg:text-xl xl:text-2xl lg:w-1/2" id="project_description">
+        A Full Stack application that allows users to create accounts and rent cars,
+        while allowing admins to create and delete them.</p>
     </div>
     <div>
       <ul  class="flex gap-4" id="stack_list">
@@ -18,12 +96,12 @@ import github_icon from '../assets/images/social_media_icons/github-icon.svg';
     </div>
     <div class="flex flex-row justify-center gap-20">
       <button class="hover:bg-transparent-white shadow-xxl hover:shadow-2xxl p-2 bg-thistle rounded-full">
-        <a href="" class="" id="see_code" target="_blank">
+        <a href="https://appoint-wheels.onrender.com" class="" id="see_code" target="_blank">
           <Image src={github_icon} alt='github icon' class='w-14'/>
         </a>
       </button>
       <button class="hover:bg-transparent-white shadow-xxl hover:shadow-2xxl p-2 bg-thistle rounded-full">
-        <a class="font-bold text-black" href="" id="see_live" target="_blank">See Live</a>
+        <a class="font-bold text-black" href="https://github.com/Rysth/REACT-AppointWheels" id="see_live" target="_blank">See Live</a>
       </button>
     </div>
   </div>
